@@ -5,6 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   base: "/", // ✅ sempre radice in locale
   plugins: [react(), tailwindcss()],
+  assetsInclude: ['**/*.JPG', '**/*.jpg'], // <-- aggiungi questa riga
   server: {
     open: true,
     host: false,

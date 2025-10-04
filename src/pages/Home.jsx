@@ -32,7 +32,7 @@ const Home = () => {
       <div className="bg-soft-white">
         <Profession />
       </div>
-      <HappyClients />
+      {/* <HappyClients /> */}
       <Testimonial />
       <Contact />
     </div>

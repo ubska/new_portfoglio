@@ -3,21 +3,21 @@ import Roles from "./Roles";
 const rolesData = [
   {
     id: 1,
-    title: "User Experience (UX)",
+    title: "Web Development",
     description:
-      "I design intuitive and enjoyable experiences by understanding user needs, conducting research, and creating wireframes and prototypes that enhance usability.",
+      "I build responsive and high-performance web applications using modern technologies like React, Vue, and Laravel, ensuring accessibility, scalability, and maintainability.",
   },
   {
     id: 2,
-    title: "User Interface (UI)",
+    title: "Frontend Design",
     description:
-      "I craft visually appealing and consistent interfaces, focusing on layout, color, and typography to ensure a seamless and engaging user journey.",
+      "I craft visually appealing and interactive interfaces, focusing on layout, color, and typography to create a seamless user experience across devices.",
   },
   {
     id: 3,
-    title: "Web Development",
+    title: "UX & UI Optimization",
     description:
-      "I build responsive and high-performance web applications using modern technologies, ensuring accessibility, scalability, and maintainability.",
+      "I design intuitive and enjoyable experiences by understanding user behavior, creating wireframes, and implementing prototypes that enhance usability.",
   },
 ];
 
@@ -31,14 +31,10 @@ const Profession = () => {
         <p className="section-title max-md:text-center">What I do?</p>
         <div className="mt-6 text-[14px]">
           <p className="text-xs sm:text-lg font-normal text-gray-400 mb-4">
-            I specialize in designing user experiences, crafting engaging
-            interfaces, and building robust web applications that deliver value
-            and usability.
+            I specialize in building modern, responsive web applications, crafting engaging interfaces, and delivering seamless user experiences.
           </p>
           <p className="text-xs sm:text-lg font-normal text-gray-400">
-            My approach combines creativity and technical expertise to deliver
-            solutions that are both visually appealing and highly functional for
-            users.
+            Combining creativity with technical expertise, I provide solutions that are visually appealing, highly functional, and user-friendly.
           </p>
         </div>
         <a

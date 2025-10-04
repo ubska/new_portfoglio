@@ -1,24 +1,25 @@
-import person from "../../assets/images/person.png";
+import person from "../../assets/images/IMG_4600.JPG";
 import "./introduction.css";
 import InformationSummary from "./InformationSummary";
 
 // Information summary data
 const informationSummaryData = [
-  {
-    id: 1,
-    title: "Experience",
-    description: "15 Y.",
-  },
-  {
-    id: 2,
-    title: "Projects Completed",
-    description: "250+",
-  },
-  {
-    id: 3,
-    title: "Happy Clients",
-    description: "58",
-  },
+{
+  id: 1,
+  title: "Experience",
+  description: "1 year",
+},
+{
+  id: 2,
+  title: "Projects Completed",
+  description: "5+",
+},
+{
+  id: 3,
+  title: "Coffee Cups Consumed",
+  description: "999+", // un tocco divertente e personale
+},
+
 ];
 
 const Introduction = () => {
