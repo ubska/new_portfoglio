@@ -1,3 +1,6 @@
+import React from "react";
+import emailjs from "emailjs-com";
+
 const telegramSVG = (
   <svg
     className="w-4 md:w-6 aspect-square"
@@ -16,62 +19,52 @@ const commonClass =
   "input input-lg border-0 border-b-2 focus:outline-none focus:placeholder:text-picto-primary placeholder:text-[15px] md:placeholder:text-lg focus:border-picto-primary border-[#E6E8EB] w-full rounded-none px-0";
 
 const Form = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_804m03d",
+        "template_at0xv5e",
+        e.target,
+        "-tS1Jb0jQW1ubKZFO"
+      )
+      .then(
+        (result) => {
+          alert("Email inviata con successo!");
+          e.target.reset();
+        },
+        (error) => {
+          alert("Errore nell'invio dell'email.");
+        }
+      );
+  };
+
   return (
-    <div>
-      <p className="text-[12px] xs:text-[14px] max-lg:text-center sm:text-lg font-normal text-soft-dark">
+    <div className="max-w-xl mx-auto p-6 bg-white shadow-lg rounded-xl mt-10">
+      <p className="text-[12px] xs:text-[14px] max-lg:text-center sm:text-lg font-normal text-soft-dark mb-6">
         I'm always open to discussing product design work or partnership
         opportunities.
       </p>
-      <div className="mx-2">
-        <form className="flex flex-col gap-4 mt-4">
-          <input
-            type="text"
-            placeholder="Name*"
-            className={`${commonClass}`}
-            required
-          />
-          <input
-            type="email"
-            placeholder="Email*"
-            className={`${commonClass}`}
-            required
-          />
-          <input
-            type="text"
-            placeholder="Location*"
-            className={`${commonClass}`}
-            required
-          />
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-4">
+        <input type="text" name="name" placeholder="Name*" className={commonClass} required />
+        <input type="email" name="email" placeholder="Email*" className={commonClass} required />
+        <input type="text" name="location" placeholder="Location*" className={commonClass} required />
 
-          <div className="flex max-xs:flex-col max-xs:gap-4">
-            <input
-              type="text"
-              placeholder="Budget*"
-              className={`${commonClass} xs:w-[50%] me-5`}
-              required
-            />
-            <input
-              type="text"
-              placeholder="Subject*"
-              className={`${commonClass}`}
-              required
-            />
-          </div>
+        <div className="flex max-xs:flex-col max-xs:gap-4">
+          <input type="text" name="budget" placeholder="Budget*" className={`${commonClass} xs:w-[50%] me-5`} required />
+          <input type="text" name="subject" placeholder="Subject*" className={commonClass} required />
+        </div>
 
-          <input
-            type="text"
-            placeholder="Message*"
-            className={`${commonClass}`}
-            required
-          />
-          <button
-            type="submit"
-            className="btn gap-3 max-lg:mx-auto btn-primary rounded-sm mt-5 text-[13px] md:text-[16px] w-fit font-semibold lg:mt-12.5 p-2 md:px-4"
-          >
-            Submit {telegramSVG}
-          </button>
-        </form>
-      </div>
+        <input type="text" name="message" placeholder="Message*" className={commonClass} required />
+
+        <button
+          type="submit"
+          className="btn gap-3 max-lg:mx-auto btn-primary rounded-sm mt-5 text-[13px] md:text-[16px] w-fit font-semibold lg:mt-12.5 p-2 md:px-4 flex items-center justify-center"
+        >
+          Submit {telegramSVG}
+        </button>
+      </form>
     </div>
   );
 };

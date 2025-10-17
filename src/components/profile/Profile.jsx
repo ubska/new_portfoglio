@@ -2,6 +2,7 @@ import person from "../../assets/images/IMG_4600.JPG";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import SocialMedia from "../common/socialMedia/SocialMedia";
+import CV from "../../assets/CV.UBSKA.pdf.pdf";
 
 const Profile = () => {
   return (
@@ -56,11 +57,12 @@ const Profile = () => {
               My Projects
             </a>
             <a
-              className={`btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 hover:border-picto-primary bg-white duration-300 transition-all hover:text-picto-primary  ms-4 text-xs xxs:text-[14px] sm:text-[16px]`}
-              href="#!"
-            >
-              <FontAwesomeIcon icon={faDownload} /> Download CV
-            </a>
+  className={`btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 hover:border-picto-primary bg-white duration-300 transition-all hover:text-picto-primary  ms-4 text-xs xxs:text-[14px] sm:text-[16px]`}
+  href={CV}
+  download="My_CV.pdf"
+>
+  <FontAwesomeIcon icon={faDownload} /> Download CV
+</a>
           </div>
         </div>
       </div>
