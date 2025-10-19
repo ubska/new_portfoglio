@@ -1,7 +1,7 @@
 # 🌸 Oleksandra Ubs'ka – Personal Portfolio
 
 <p align="center">
-  <img src="./screenshot.png" alt="Website Preview" width="800"/>
+  <img src="./preview.png.png.png" alt="Website Preview" width="800"/>
 </p>
 
 Welcome to the repository of my **personal portfolio website**, built with **React**.  
